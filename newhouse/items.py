@@ -8,7 +8,6 @@
 import scrapy
 
 
-
 class NewhouseItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
@@ -42,4 +41,12 @@ class HouseModelItem(NewhouseItem):
     tel = scrapy.Field()
     href =  scrapy.Field()
     image_urls = scrapy.Field()
+
+class HouseDetailModelItem(scrapy.Item):
+    href = scrapy.Field()
+    info = scrapy.Field()
+    ping = scrapy.Field()
+    stag = scrapy.Field()
+    total_price = scrapy.Field()
+
 

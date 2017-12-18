@@ -46,10 +46,10 @@ CONCURRENT_REQUESTS_PER_IP = 320
 
 # Enable or disable spider middlewares
 # See http://scrapy.readthedocs.org/en/latest/topics/spider-middleware.html
-# SPIDER_MIDDLEWARES = {
-#     'newhouse.middlewares.MyUserAgentMiddleware': 541,
-#    # 'newhouse.middlewares.NewhouseSpiderMiddleware': 543
-# }
+SPIDER_MIDDLEWARES = {
+    'newhouse.middlewares.MyUserAgentMiddleware': 541,
+   # 'newhouse.middlewares.NewhouseSpiderMiddleware': 543
+}
 
 
 # Enable or disable downloader middlewares
