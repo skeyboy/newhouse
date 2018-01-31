@@ -3,14 +3,15 @@ import scrapy
 from newhouse.items import AreaModelItem, RailModelItem, StationModelItem, HouseModelItem, HouseDetailModelItem
 import sqlite3
 
-host = "http://newhouse.zz.fang.com"
-start = "http://newhouse.zz.fang.com/house/s/"
+city = 'zz'
+host = "http://newhouse." + city + ".fang.com"
+start = "http://newhouse." + city + ".fang.com/house/s/"
 
 
 class NewhouseSpider(scrapy.Spider):
     name = "NewHouse"
     start_urls = [start]
-    db = sqlite3.connect('./newhouse.db')
+    db = sqlite3.connect('./newhouse_'+city+'.db')
 
     def parse(self, response):
 
